@@ -1,3 +1,66 @@
+@import "./fonts";
+@import "./vars";
+@import "~normalize.css";
+
 body {
-  background-color: blanchedalmond;
+  background-image: linear-gradient(to right, rgb(40, 48, 72), rgb(133, 147, 152));
+  font-family: $font-primary;
+  color: $color-primary;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  transition: $transition-primary;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: $container;
+}
+
+
+.Content {
+  h1, h2, h3, h4 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: $color-primary;
+    margin-bottom: 1rem;
+    line-height: 1.37;
+  }
+
+  a {
+    color: $color-link;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    list-style-type: square;
+    list-style-position: inside;
+  }
+
+  li {
+    font-size: 1.25rem;
+    line-height: 1.37;
+    margin-bottom: 0.5rem;
+
+    span,
+    strong {
+      color: lightcoral;
+    }
+  }
 }

@@ -1,0 +1,34 @@
+@import "../../styles/scss/vars";
+
+.Header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background-color: lightslategrey;
+
+  @media (min-width: $desktop) {
+    padding: 2rem 0;
+  }
+}
+
+.Nav {
+  display: flex;
+
+  a {
+    display: block;
+    font-size: 1.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-primary;
+
+    &:hover {
+      color: $color-link;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+    }
+  }
+}

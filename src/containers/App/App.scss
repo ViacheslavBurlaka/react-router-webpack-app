@@ -1,0 +1,11 @@
+@import "../../styles/scss/vars";
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  @media (min-width: $desktop) {
+    min-height: 100vh;
+  }
+}
