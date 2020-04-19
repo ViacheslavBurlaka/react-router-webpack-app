@@ -1,18 +1,14 @@
 import React from 'react';
-import Layout from "../../containers/Layout/Layout";
+import Layout from '../../containers/Layout/Layout';
 
 const About = () => {
   return (
     <Layout>
-      <h1>
-        About page
-      </h1>
+      <h1>About page</h1>
+      <p>It's small but tricky application.</p>
       <p>
-        It's small but tricky application.
-      </p>
-      <p>
-        It displays master-detail data
-        from <a href="https://randomuser.me/"> https://randomuser.me/</a>,
+        It displays master-detail data from{''}
+        <a href="https://randomuser.me/"> https://randomuser.me/</a>,
       </p>
 
       <h2>Technology Stack and requirements</h2>
@@ -31,10 +27,12 @@ const About = () => {
           <span>https://$site_name$//persons</span> - list of persons. Display at least 200 records
           from <a href="https://randomuser.me/">https://randomuser.me/</a>
         </li>
-        <li><span>https://$site_name$/person/:id</span> – details page for a record. Id is
+        <li>
+          <span>https://$site_name$/person/:id</span> – details page for a record. Id is
           “login.uuid” field
         </li>
-        <li><span>https://$site_name$/about</span> - some static “about” page with that information.
+        <li>
+          <span>https://$site_name$/about</span> - some static “about” page with that information.
         </li>
       </ul>
     </Layout>

@@ -1,11 +1,11 @@
 import React from 'react';
-import AppRouter from "../../routers/AppRouter";
-import "./App.scss"
+import AppRouter from '../../routers/AppRouter';
+import './App.scss';
 
 const App = () => {
   return (
     <div className="App">
-      <AppRouter/>
+      <AppRouter />
     </div>
   );
 };

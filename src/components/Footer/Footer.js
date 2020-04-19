@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Footer.scss";
+import './Footer.scss';
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <p>
           © 2020. React app.
-          <br/>
+          <br />
           All Rights Reserved.
         </p>
       </div>

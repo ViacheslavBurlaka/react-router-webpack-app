@@ -1,6 +1,6 @@
-@import "./fonts";
-@import "./vars";
-@import "~normalize.css";
+@import './fonts';
+@import './vars';
+@import '~normalize.css';
 
 body {
   background-image: linear-gradient(to right, rgb(40, 48, 72), rgb(133, 147, 152));
@@ -26,9 +26,11 @@ a {
   max-width: $container;
 }
 
-
 .Content {
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     margin-top: 2rem;
     margin-bottom: 1rem;
   }

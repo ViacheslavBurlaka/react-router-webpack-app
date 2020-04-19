@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from "../../containers/Layout/Layout";
+import Layout from '../../containers/Layout/Layout';
 
 const NotFound = () => {
   return (

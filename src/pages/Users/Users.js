@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from "../../containers/Layout/Layout";
-import {Link} from "react-router-dom";
+import Layout from '../../containers/Layout/Layout';
+import { Link } from 'react-router-dom';
 
 const Users = () => {
   return (
