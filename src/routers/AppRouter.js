@@ -10,7 +10,7 @@ import User from '../pages/User/User';
 
 const AppRouter = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Header />
       <Switch>
         <Route path="/" component={Home} exact />
