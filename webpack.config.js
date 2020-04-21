@@ -94,7 +94,7 @@ const plugins = () => {
   ];
 };
 
-let publicPath = isDev ? '/' : '/react-router-webpack-app';
+let publicPath = isDev ? '/' : '';
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
