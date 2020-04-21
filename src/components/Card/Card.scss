@@ -1,0 +1,89 @@
+@import '../../styles/scss/vars';
+
+.Card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.2);
+
+  @media (min-width: $tablet) {
+    width: 49%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    width: 32%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+
+    &:nth-of-type(2n) {
+      margin-right: 2%;
+    }
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: $color-btn;
+    text-decoration: none;
+
+    &:hover {
+      background-color: darken($color-btn, 10%);
+    }
+  }
+}
+
+// Icons
+.icon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.icon--male {
+  background-image: url(../../assets/icons/man.svg);
+}
+
+.icon--female {
+  background-image: url(../../assets/icons/woman.svg);
+}
+
+.icon--email {
+  background-image: url(../../assets/icons/email.svg);
+}
+
+.icon--phone {
+  background-image: url(../../assets/icons/phone.svg);
+}

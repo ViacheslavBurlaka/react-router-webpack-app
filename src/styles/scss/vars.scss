@@ -1,10 +1,15 @@
 $color-primary: #ece8e8;
 $color-link: lightgoldenrodyellow;
+$color-btn: limegreen;
+$gradient-primary: linear-gradient(to right, rgb(40, 48, 72), rgb(133, 147, 152));
+
+$font-primary: 'Space Mono', monospace;
+$font-secondary: IBM Plex Sans, sans-serif;
 
 //
-$font-primary: NovaMono, sans-serif;
 $transition-primary: 0.25s;
 
 // Media
-$container: 960px;
+$container: 992px;
+$tablet: 768px;
 $desktop: 1024px;

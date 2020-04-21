@@ -3,9 +3,10 @@
 @import '~normalize.css';
 
 body {
-  background-image: linear-gradient(to right, rgb(40, 48, 72), rgb(133, 147, 152));
+  background-image: $gradient-primary;
   font-family: $font-primary;
   color: $color-primary;
+  overflow-x: hidden;
 }
 
 *,
@@ -36,7 +37,7 @@ a {
   }
 
   p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: $color-primary;
     margin-bottom: 1rem;
     line-height: 1.37;
@@ -56,13 +57,34 @@ a {
   }
 
   li {
-    font-size: 1.25rem;
+    position: relative;
+    font-size: 1rem;
     line-height: 1.37;
     margin-bottom: 0.5rem;
 
     span,
     strong {
       color: lightcoral;
+    }
+  }
+
+  .checked-list {
+    list-style-type: none;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: '';
+        background-image: url(../../assets/icons/check-circle.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
     }
   }
 }

@@ -12,7 +12,7 @@ const About = () => {
       </p>
 
       <h2>Technology Stack and requirements</h2>
-      <ul>
+      <ul className="checked-list">
         <li>React: 16.8+ with hooks</li>
         <li>Styles: SCSS</li>
         <li>Builder: Webpack</li>

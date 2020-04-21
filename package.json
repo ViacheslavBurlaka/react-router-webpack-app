@@ -1,4 +1,5 @@
 {
+  "homepage":"https://viacheslavburlaka.github.io/react-router-webpack-app/",
   "name": "react-router-webpack-app",
   "version": "1.0.0",
   "description": "React router app with webpack config ",
@@ -7,7 +8,9 @@
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open",
-    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json"
+    "stats": "webpack --json > stats.json && webpack-bundle-analyzer stats.json",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "webpack",
@@ -39,6 +42,7 @@
     "eslint-loader": "^4.0.0",
     "eslint-plugin-react": "^7.19.0",
     "file-loader": "^6.0.0",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^4.2.0",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",

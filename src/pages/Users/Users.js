@@ -1,13 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../../containers/Layout/Layout';
-import { Link } from 'react-router-dom';
+import Card from '../../components/Card/Card';
+import './Users.scss';
+import Loader from '../../elements/Loader/Loader';
 
 const Users = () => {
-  return (
+  const [loading, setLoading] = useState(true);
+  const [users, setUsers] = useState({});
+
+  const USERS_SIZE = 200;
+  const USERS_API = 'https://randomuser.me/api/';
+
+  useEffect(() => {
+    fetch(`${USERS_API}?results=${USERS_SIZE}`)
+      .then((res) => res.json())
+      .then((json) => {
+        setUsers(json);
+        setLoading(false);
+      })
+      .catch((err) => console.error('Error =>', err));
+  }, []);
+
+  return loading ? (
     <Layout>
-      <h1>Persons page</h1>
-      <div>
-        <Link to="person/2">TestLink to Person2</Link>
+      <Loader />
+    </Layout>
+  ) : (
+    <Layout>
+      <h1>Users page</h1>
+      <div className="UsersList">
+        {users.results.map((el, index) => (
+          <Card key={index} user={el} />
+        ))}
       </div>
     </Layout>
   );
