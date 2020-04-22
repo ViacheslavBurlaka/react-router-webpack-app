@@ -84,7 +84,7 @@ const plugins = () => {
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, 'src/favicon.ico'),
+        from: path.resolve(__dirname, 'public'),
         to: path.resolve(__dirname, 'dist'),
       },
     ]),
@@ -94,7 +94,7 @@ const plugins = () => {
   ];
 };
 
-let publicPath = isDev ? '/' : '';
+// let publicPath = isDev ? '/' : '';
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -105,7 +105,7 @@ module.exports = {
   output: {
     filename: filename('js'),
     path: path.resolve(__dirname, 'dist'),
-    publicPath: publicPath,
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.json', '.png'],

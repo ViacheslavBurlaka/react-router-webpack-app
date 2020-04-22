@@ -43,6 +43,11 @@
       margin-bottom: 0;
     }
 
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     img {
       border-radius: 50%;
     }
@@ -69,7 +74,7 @@
   height: 1.25rem;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 }
 
 .icon--male {
