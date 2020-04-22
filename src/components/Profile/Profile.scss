@@ -24,6 +24,25 @@
       padding: 0.75rem;
     }
 
+    &:last-of-type {
+      border-bottom: 0;
+    }
+
+    .emojiFlag {
+      font-size: 1.3rem !important;
+    }
+
+    .Btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 1rem 0 0.5rem;
+      text-transform: uppercase;
+
+      &:hover {
+        box-shadow: 0 2px 0 0 $color-link;
+      }
+    }
+
     span {
       //color: lightsalmon;
       font-weight: bold;

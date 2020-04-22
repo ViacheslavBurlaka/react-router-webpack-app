@@ -1,5 +1,5 @@
 {
-  "homepage":"https://viacheslavburlaka.github.io/react-router-webpack-app/",
+  "homepage": "https://viacheslavburlaka.github.io/react-router-webpack-app/",
   "name": "react-router-webpack-app",
   "version": "1.0.0",
   "description": "React router app with webpack config ",
@@ -24,6 +24,7 @@
     "@babel/polyfill": "^7.8.7",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
+    "react-country-flag": "^2.0.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2"
   },

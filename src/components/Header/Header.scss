@@ -1,4 +1,4 @@
-@import "../../styles/scss/vars";
+@import '../../styles/scss/vars';
 
 .Header {
   position: sticky;
@@ -24,8 +24,10 @@
     text-transform: uppercase;
     color: $color-primary;
 
+    &.active,
     &:hover {
       color: $color-link;
+      box-shadow: 0 2px 0 0 lightgoldenrodyellow;
     }
 
     &:not(:last-of-type) {

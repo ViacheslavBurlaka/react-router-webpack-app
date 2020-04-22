@@ -2,6 +2,8 @@ import React from 'react';
 import './Profile.scss';
 import PropTypes from 'prop-types';
 import { getFormattedDate } from '../../utils/getFormattedDate';
+import { Link } from 'react-router-dom';
+import ReactCountryFlag from 'react-country-flag';
 
 const Profile = ({ profile }) => {
   /**
@@ -10,7 +12,6 @@ const Profile = ({ profile }) => {
    gender: "male"
    id: {name: "PPS", value: "2425284T"}
    location: {street: {…}, city: "Westport", state: "Cork City", country: "Ireland", postcode: 15303, …}
-   login: {uuid: "169f6f20-b794-42f9-a610-568fb9e2d52b", username: "bigbird390", password: "garfield", salt: "UEJqj8JN", md5: "40ab4db0e29668dd5b17fe05e5d7dd6c", …}
    name: {title: "Mr", first: "Barry", last: "Horton"}
    nat: "IE"
    phone: "061-591-8317"
@@ -54,7 +55,8 @@ const Profile = ({ profile }) => {
             <span>Email:</span> {email}
           </div>
           <div className="Profile__row">
-            <span>Nationality:</span> {nat}
+            <span>Nationality:</span> {nat}{' '}
+            <ReactCountryFlag className="emojiFlag" countryCode={nat} />
           </div>
           <div className="Profile__row">
             <span>Address:</span> {location.street.name}, {location.street.number} {''}{' '}
@@ -71,6 +73,11 @@ const Profile = ({ profile }) => {
           </div>
           <div className="Profile__row">
             <span>Phone:</span> {phone}
+          </div>
+          <div className="Profile__row">
+            <Link className="Btn" to="/persons/">
+              Go back
+            </Link>
           </div>
         </div>
       </div>

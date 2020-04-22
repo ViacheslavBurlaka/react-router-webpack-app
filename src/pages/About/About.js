@@ -7,7 +7,7 @@ const About = () => {
       <h1>About page</h1>
       <p>It's small but tricky application.</p>
       <p>
-        It displays master-detail data from{''}
+        It displays master-detail data from{' '}
         <a href="https://randomuser.me/"> https://randomuser.me/</a>,
       </p>
 
