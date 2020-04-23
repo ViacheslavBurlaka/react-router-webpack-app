@@ -9,8 +9,11 @@ import Users from '../pages/Users/Users';
 import User from '../pages/User/User';
 
 const AppRouter = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Header />
       <Switch>
         <Route path="/" component={Home} exact />
@@ -20,7 +23,7 @@ const AppRouter = () => {
         <Route component={NotFound} />
         <Redirect to="/" />
       </Switch>
-      <Footer />
+      <Footer year={year} />
     </Router>
   );
 };

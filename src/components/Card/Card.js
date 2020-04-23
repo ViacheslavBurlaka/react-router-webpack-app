@@ -47,5 +47,12 @@ const Card = ({ user }) => {
 export default Card;
 
 Card.propTypes = {
-  user: PropTypes.any,
+  user: PropTypes.shape({
+    name: PropTypes.objectOf(PropTypes.string),
+    login: PropTypes.objectOf(PropTypes.string),
+    picture: PropTypes.objectOf(PropTypes.string),
+    gender: PropTypes.string,
+    email: PropTypes.string,
+    phone: PropTypes.string,
+  }).isRequired,
 };

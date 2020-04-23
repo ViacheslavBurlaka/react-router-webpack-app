@@ -1,12 +1,13 @@
 import React from 'react';
 import './Footer.scss';
+import PropTypes from 'prop-types';
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <footer className="Footer">
       <div className="container">
         <p>
-          © 2020. React app.
+          © {props.year}. React app.
           <br />
           All Rights Reserved.
         </p>
@@ -16,3 +17,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
+Footer.propTypes = {
+  year: PropTypes.number,
+};

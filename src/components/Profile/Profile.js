@@ -6,18 +6,6 @@ import { Link } from 'react-router-dom';
 import ReactCountryFlag from 'react-country-flag';
 
 const Profile = ({ profile }) => {
-  /**
-   dob: {date: "1967-12-11T12:39:38.052Z", age: 53}
-   email: "barry.horton@example.com"
-   gender: "male"
-   id: {name: "PPS", value: "2425284T"}
-   location: {street: {…}, city: "Westport", state: "Cork City", country: "Ireland", postcode: 15303, …}
-   name: {title: "Mr", first: "Barry", last: "Horton"}
-   nat: "IE"
-   phone: "061-591-8317"
-   picture: {large: "{url}", medium: "{url}", thumbnail: "{url}"}
-   registered: {date: "2011-08-05T04:55:15.072Z", age: 9}
-   */
   const {
     name, //
     picture,
@@ -88,5 +76,26 @@ const Profile = ({ profile }) => {
 export default Profile;
 
 Profile.propTypes = {
-  profile: PropTypes.object,
+  profile: PropTypes.shape({
+    name: PropTypes.objectOf(PropTypes.string),
+    id: PropTypes.objectOf(PropTypes.string),
+    dob: PropTypes.shape({
+      date: PropTypes.string,
+      age: PropTypes.number,
+    }),
+    location: PropTypes.shape({
+      street: PropTypes.object,
+      city: PropTypes.string,
+      state: PropTypes.string,
+      country: PropTypes.string,
+      postcode: PropTypes.number,
+    }),
+    login: PropTypes.objectOf(PropTypes.string),
+    picture: PropTypes.objectOf(PropTypes.string),
+    registered: PropTypes.object,
+    gender: PropTypes.string,
+    nat: PropTypes.string,
+    email: PropTypes.string,
+    phone: PropTypes.string,
+  }),
 };
