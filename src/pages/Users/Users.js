@@ -16,7 +16,6 @@ const Users = () => {
       .then((res) => res.json())
       .then((json) => {
         setUsers(json);
-        console.log(json);
         setLoading(false);
       })
       .catch((err) => console.error('Error =>', err));
