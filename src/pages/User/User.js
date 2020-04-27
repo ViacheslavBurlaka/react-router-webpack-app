@@ -3,7 +3,7 @@ import Layout from '../../containers/Layout/Layout';
 // import Profile from '../../components/Profile/Profile';
 import './User.scss';
 import PropTypes from 'prop-types';
-import AngularProfile from '../../angular/AngularProfile';
+import AngularProfile from '../../components/Profile/AngularProfile';
 
 const User = (props) => {
   const { user } = props.location.state;

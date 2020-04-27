@@ -5,15 +5,16 @@ const About = () => {
   return (
     <Layout>
       <h1>About page</h1>
-      <p>It's small but tricky application.</p>
+      <p>It's small but tricky application</p>
       <p>
         It displays master-detail data from{' '}
-        <a href="https://randomuser.me/"> https://randomuser.me/</a>,
+        <a href="https://randomuser.me/"> https://randomuser.me/</a>
       </p>
 
       <h2>Technology Stack and requirements</h2>
       <ul className="checked-list">
         <li>React: 16.8+ with hooks</li>
+        <li>AngularJS 1.7</li>
         <li>Styles: SCSS</li>
         <li>Builder: Webpack</li>
         <li>Target browsers: evergreens, IE11, iOS</li>
@@ -24,12 +25,17 @@ const About = () => {
       <p>Application includes routes:</p>
       <ul>
         <li>
-          <span>https://$site_name$//persons</span> - list of persons. Display at least 200 records
-          from <a href="https://randomuser.me/">https://randomuser.me/</a>
+          <span>
+            https://<i>site_name</i>/persons
+          </span>{' '}
+          - list of persons. Display at least 200 records from{' '}
+          <a href="https://randomuser.me/">https://randomuser.me/</a>
         </li>
         <li>
-          <span>https://$site_name$/person/:id</span> – details page for a record. Id is
-          “login.uuid” field
+          <span>
+            https://<i>site_name</i>/person/:id
+          </span>{' '}
+          – details page for a record. Id is “login.uuid” field. Based on AngularJS.
         </li>
         <li>
           <span>https://$site_name$/about</span> - some static “about” page with that information.

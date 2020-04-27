@@ -1,44 +1,57 @@
 import angular from 'angular';
 import { angular2react } from 'angular2react';
-import './../components/Profile/Profile.scss';
+import './Profile.scss';
 
 const profileTemplate = `
     <div ng-controller="ProfileController">
       <h1>
-         {{profile.name.first}} {{profile.name.last}}
+         {{profile.name.first | uppercase}} {{profile.name.last | uppercase}}
       </h1>
       <div class="Profile">
         <div class="Profile__col">
-          <img src={{profile.picture.large}} alt={{profile.name.first}} />
+          <img ng-src="{{profile.picture.large}}" />
         </div>
         <div class="Profile__col">
             <div class="Profile__row">
-              <span>ID:</span> {{profile.id.name}}, {{profile.id.value}}
+              <span>ID:</span> <span ng-bind="profile.id.name"/> <span ng-bind="profile.id.value"/>
             </div>
           <div class="Profile__row">
-            <span>Gender:</span> {{profile.gender}}
+            <span>Gender:</span>
+            <span ng-bind="profile.gender"/>
           </div>
           <div class="Profile__row">
-            <span>Email:</span> {{profile.email}}
+            <span>Email:</span>
+            <span ng-bind="profile.email"/>
           </div>
           <div class="Profile__row">
-            <span>Nationality:</span> {{profile.nat}}
+            <span>Nationality:</span>
+            <span ng-bind="profile.nat"/>
           </div>
           <div class="Profile__row">
-            <span>Address:</span> {{profile.location.street.name}}, {{profile.location.street.number}}
-            {{profile.location.city}}, {{profile.location.state}}, {{profile.location.country}}, {{profile.location.postcode}}
+            <span>Address:</span>
+            <span ng-bind="profile.location.street.name"/>,
+            <span ng-bind="profile.location.street.number"/>,
+            <span ng-bind="profile.location.city"/>,
+            <span ng-bind="profile.location.state"/>,
+            <span ng-bind="profile.location.country"/>,
+            <span ng-bind="profile.location.postcode"/>
           </div>
           <div class="Profile__row">
-            <span>Birth:</span> {{profile.dob.date}}
+            <span>Birth:</span>
+            <span ng-bind="profile.dob.date | date:'MM/dd/yyyy'"/>
           </div>
           <div class="Profile__row">
-            <span>Registered:</span> {{profile.registered.date}}
+            <span>Registered:</span>
+            <span ng-bind="profile.registered.date | date:'MM/dd/yyyy'"/>
           </div>
           <div class="Profile__row">
-            <span>Age:</span> {{profile.dob.age}}
+            <span>Age:</span>
+            <span ng-bind="profile.dob.age"/>
           </div>
           <div class="Profile__row">
-            <span>Phone:</span> {{profile.phone}}
+            <span>Phone:</span>
+            <span ng-bind="profile.phone"/>
+
           </div>
           <div class="Profile__row">
             <a class="Btn" ng-href="/persons/">
@@ -48,6 +61,7 @@ const profileTemplate = `
         </div>
       </div>
     </div>
+
   `;
 
 const ProfileComponent = {
