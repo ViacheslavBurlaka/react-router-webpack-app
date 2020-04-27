@@ -76,9 +76,12 @@ let $injector;
 angular
   .module('Profile', [])
   .component('profileComponent', ProfileComponent)
-  .controller('ProfileController', function ProfileController($scope) {
-    $scope.profile = $scope.$ctrl.profile;
-  })
+  .controller('ProfileController', [
+    '$scope',
+    function ($scope) {
+      $scope.profile = $scope.$ctrl.profile;
+    },
+  ])
   .run([
     '$injector',
     function (_$injector) {
