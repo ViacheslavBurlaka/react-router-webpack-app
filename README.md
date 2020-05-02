@@ -1,5 +1,7 @@
 # React router webpack app
-=
+
+https://react-angular-hybryd-app.surge.sh/persons/
+
 Angular2react makes possible reuse angularjs code inside react components.
 
 Use: 
