@@ -22,7 +22,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
-    "angular": "^1.7.9",
+    "angular": "^1.8.0",
     "angular-resource": "^1.7.9",
     "angular2react": "^3.0.2",
     "normalize.css": "^8.0.1",
